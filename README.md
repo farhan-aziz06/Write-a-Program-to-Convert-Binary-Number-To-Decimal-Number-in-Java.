@@ -18,28 +18,35 @@ a positional value of 1, the next digit to the left a positional value of 2, the
 The decimal equivalent of binary 1101 is 1 * 1 + 0 * 2 + 1 * 4 + 1 * 8, or 1 + 0 + 4 + 8 or, 13.]
 
 
-import java.util.Scanner;
+            import java.util.Scanner;
 
-public class Main {
-    public static void main(String[] args) {
-        Scanner console = new Scanner(System.in);
-        System.out.println("Enter a Binary Number Such that 1101: ");
-        int BinaryNumber = console.nextInt();
+            public class Main {
 
-        int r, DecimalNumber=0, power = 0;
 
-        int temp=BinaryNumber;
 
-        while (BinaryNumber>0){
+                public static void main(String[] args) {
 
-             r = BinaryNumber%10;
 
-             DecimalNumber= DecimalNumber+(r*(int)(Math.pow(2,power)));
+                    Scanner console = new Scanner(System.in);
 
-             BinaryNumber=BinaryNumber/10;
+                    System.out.println("Enter a Binary Number Such that 1101: ");
 
-             power++;
-        }
-        System.out.println("Decimal Equivalent of a Number "+ temp +"is: "+DecimalNumber );
-    }
-}
+                    int BinaryNumber = console.nextInt();
+
+                    int r, DecimalNumber=0, power = 0;
+
+                    int temp=BinaryNumber;
+
+                    while (BinaryNumber>0){
+
+                         r = BinaryNumber%10;
+
+                         DecimalNumber= DecimalNumber+(r*(int)(Math.pow(2,power)));
+
+                         BinaryNumber=BinaryNumber/10;
+
+                         power++;
+                    }
+                    System.out.println("Decimal Equivalent of a Number "+ temp +"is: "+DecimalNumber );
+                }
+            }
